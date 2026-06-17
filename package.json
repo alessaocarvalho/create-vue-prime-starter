@@ -1,0 +1,26 @@
+{
+  "name": "create-vue-prime-starter",
+  "version": "1.0.0",
+  "description": "Gerador de aplicacoes Vue 3 + PrimeVue com scaffold oficial do Vue e uma base pronta para temas, layouts, HttpClient, stores e tratamento de erros.",
+  "type": "module",
+  "bin": {
+    "create-vue-prime-starter": "bin/index.mjs"
+  },
+  "files": [
+    "bin",
+    "template"
+  ],
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "primevue",
+    "pinia",
+    "scaffold",
+    "template",
+    "generator"
+  ],
+  "license": "MIT"
+}

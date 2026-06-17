@@ -1,0 +1,55 @@
+@import 'primeicons/primeicons.css';
+@import 'tailwindcss';
+@import 'tailwindcss-primeui';
+@custom-variant dark (&:where(.dark, .dark *));
+
+html,
+body,
+#app {
+  font-family: 'Roboto', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--p-primary-400);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--p-primary-600);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--p-primary-400);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--p-primary-300);
+}
+
+/* Raio global 0.75rem (rounded-xl) em inputs, botoes e containers */
+.p-button,
+.p-inputtext,
+.p-textarea,
+.p-select,
+.p-multiselect,
+.p-inputnumber-input,
+.p-autocomplete-input {
+  border-radius: 0.75rem !important;
+}
+
+.p-dialog,
+.p-card,
+.p-datatable,
+.p-tabs {
+  border-radius: 0.75rem !important;
+  overflow: hidden;
+}
