@@ -1,8 +1,11 @@
 {
-  "name": "create-vue-prime-starter",
+  "name": "@alessaocarvalho/create-vue-prime-starter",
   "version": "1.0.0",
   "description": "Gerador de aplicacoes Vue 3 + PrimeVue com scaffold oficial do Vue e uma base pronta para temas, layouts, HttpClient, stores e tratamento de erros.",
   "type": "module",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "bin": {
     "create-vue-prime-starter": "bin/index.mjs"
   },

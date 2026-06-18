@@ -1,14 +1,21 @@
-# create-vue-prime-starter
+# @alessaocarvalho/create-vue-prime-starter
 
-Gerador de aplicacoes **Vue 3 + PrimeVue** com base no scaffold oficial do
-Vue, pronto para temas, layouts, `HttpClient`, stores Pinia e tratamento
-centralizado de erros.
+Gerador de aplicacoes **Vue 3 + PrimeVue** publicado no GitHub Packages.
+Ele parte do scaffold oficial do Vue (`create-vue`) e adiciona uma base pronta
+para temas, layouts, `HttpClient`, stores Pinia e tratamento centralizado de
+erros.
 
-Cada projeto gerado parte do scaffold oficial do Vue (`create-vue`) e depois
-recebe a estrutura completa do projeto, com exemplos comentados de cada
-camada.
+## Visao Geral
 
-## Uso
+O pacote cria um projeto novo em `./<nome-do-projeto>` e executa este fluxo:
+
+1. cria a base com `create-vue`;
+2. sobrepoe o template do pacote;
+3. instala as dependencias mais recentes disponiveis.
+
+## Como Usar
+
+### 1. Executar localmente no repositorio
 
 A partir desta pasta do projeto:
 
@@ -24,39 +31,40 @@ node bin/index.mjs minha-app --install
 node bin/index.mjs minha-app --no-install
 ```
 
-O projeto e criado em `./<nome-do-projeto>` relativo ao diretorio atual.
-O fluxo interno e:
+### 2. Usar o pacote publicado
 
-1. cria a base com `create-vue`;
-2. aplica o template do projeto por cima;
-3. instala as dependencias mais recentes disponiveis.
-
-### Como pacote npm (opcional)
-
-Publicado/instalado como pacote, pode ser usado via `npx`:
+Se voce ainda nao apontou o scope para o GitHub Packages, configure uma vez:
 
 ```bash
-npx create-vue-prime-starter minha-app
+npm config set @alessaocarvalho:registry https://npm.pkg.github.com
 ```
 
-Para testar localmente sem publicar:
+Depois rode o gerador via `npx`:
 
 ```bash
-cd packages/create-gpc-app
+npx @alessaocarvalho/create-vue-prime-starter minha-app
+```
+
+### 3. Testar sem publicar
+
+Para validar a versao local do pacote sem publicar:
+
+```bash
+cd packages/create-vue-prime-app
 npm link
 create-vue-prime-starter minha-app
 ```
 
 ## Opcoes
 
-| Opcao          | Descricao                              |
-| -------------- | -------------------------------------- |
-| `<nome>`       | Nome/pasta do projeto a ser criado     |
-| `--install`    | Roda a instalacao automaticamente       |
-| `--no-install` | Pula a instalacao de dependencias      |
-| `-h, --help`   | Mostra a ajuda                         |
+| Opcao          | Descricao                             |
+| -------------- | ------------------------------------- |
+| `<nome>`       | Nome/pasta do projeto a ser criado    |
+| `--install`    | Roda a instalacao automaticamente     |
+| `--no-install` | Pula a instalacao de dependencias     |
+| `-h, --help`   | Mostra a ajuda                        |
 
-## O que e gerado
+## O Que e Gerado
 
 - Vue 3 + Composition API + TypeScript (strict) + Vite
 - PrimeVue 4 + `@primeuix/themes` com 4 paletas, modo escuro e tamanho de fonte
@@ -69,10 +77,10 @@ As versoes das dependencias sao resolvidas no momento da criacao para pegar as
 versoes mais recentes disponiveis. O template `template/package.json` define
 quais pacotes sao instalados.
 
-## Estrutura do gerador
+## Estrutura do Gerador
 
 ```
-packages/create-gpc-app/
+packages/create-vue-prime-app/
   bin/index.mjs     # CLI (cria base com create-vue, aplica o template, substitui {{PROJECT_NAME}})
   template/         # Aplicacao base que e sobreposta na base oficial do Vue
   package.json      # Metadados + bin
