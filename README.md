@@ -1,6 +1,6 @@
-# @alessaocarvalho/create-vue-prime-starter
+# create-vue-prime-starter
 
-Gerador de aplicacoes **Vue 3 + PrimeVue** publicado no GitHub Packages.
+Gerador de aplicacoes **Vue 3 + PrimeVue** publicado no npm.
 Ele parte do scaffold oficial do Vue (`create-vue`) e adiciona uma base pronta
 para temas, layouts, `HttpClient`, stores Pinia e tratamento centralizado de
 erros.
@@ -31,18 +31,12 @@ node bin/index.mjs minha-app --install
 node bin/index.mjs minha-app --no-install
 ```
 
-### 2. Usar o pacote publicado
+### 2. Usar o pacote publicado no npm
 
-Se voce ainda nao apontou o scope para o GitHub Packages, configure uma vez:
-
-```bash
-npm config set @alessaocarvalho:registry https://npm.pkg.github.com
-```
-
-Depois rode o gerador via `npx`:
+Depois de publicar, rode o gerador via `npx`:
 
 ```bash
-npx @alessaocarvalho/create-vue-prime-starter minha-app
+npx create-vue-prime-starter minha-app
 ```
 
 ### 3. Testar sem publicar
@@ -96,3 +90,29 @@ packages/create-vue-prime-app/
 Para evoluir o template, basta editar os arquivos em `template/`. Se precisar
 alterar a base oficial do Vue ou a limpeza de arquivos residuais, isso fica em
 `bin/index.mjs`.
+
+## Publicacao no npm
+
+O pacote comeca em `0.1.0` para marcar o reinicio da publicacao no npm.
+
+### Passo a passo
+
+1. Entre na conta do npm:
+
+```bash
+npm login
+```
+
+2. Quando for subir uma nova versao, aumente o numero do pacote:
+
+```bash
+npm version patch
+```
+
+3. Publique no npm:
+
+```bash
+npm publish
+```
+
+Para lancamentos maiores, use `npm version minor` ou `npm version major`.
