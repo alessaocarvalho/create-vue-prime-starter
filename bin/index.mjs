@@ -122,7 +122,17 @@ function toLatestInstallArgs(packages, baseArgs) {
 }
 
 function runCommand(command, args, cwd) {
-  return spawnSync(command, args, { cwd, stdio: 'inherit' })
+  const result = spawnSync(command, args, {
+    cwd,
+    stdio: 'inherit',
+    shell: process.platform === 'win32',
+  })
+  if (result.error) {
+    console.error(`  Falha ao iniciar "${command} ${args.join(' ')}": ${result.error.message}`)
+  } else if (result.status !== 0) {
+    console.error(`  "${command} ${args.join(' ')}" saiu com codigo ${result.status}${result.signal ? ` (signal ${result.signal})` : ''}`)
+  }
+  return result
 }
 
 async function scaffoldVueProject(projectName) {
