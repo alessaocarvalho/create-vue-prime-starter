@@ -126,7 +126,7 @@ function runCommand(command, args, cwd) {
 }
 
 async function scaffoldVueProject(projectName) {
-  const result = runCommand(NPM_CMD, ['exec', '--yes', '--', 'create-vue@latest', projectName, '--bare', '--typescript'], process.cwd())
+  const result = runCommand(NPM_CMD, ['create', 'vue@latest', projectName, '--', '--bare', '--typescript'], process.cwd())
   return result.status === 0
 }
 
