@@ -34,22 +34,3 @@ body,
 .dark ::-webkit-scrollbar-thumb:hover {
   background: var(--p-primary-300);
 }
-
-/* Raio global 0.75rem (rounded-xl) em inputs, botoes e containers */
-.p-button,
-.p-inputtext,
-.p-textarea,
-.p-select,
-.p-multiselect,
-.p-inputnumber-input,
-.p-autocomplete-input {
-  border-radius: 0.75rem !important;
-}
-
-.p-dialog,
-.p-card,
-.p-datatable,
-.p-tabs {
-  border-radius: 0.75rem !important;
-  overflow: hidden;
-}

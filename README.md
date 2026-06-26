@@ -67,6 +67,12 @@ create-vue-prime-starter minha-app
 - `ErrorDialog` global e `ThemeSwitcher`
 - Tailwind CSS 4 + `tailwindcss-primeui`
 
+No modo interativo, a selecao de features representa recursos prontos do
+template, como cliente HTTP, stores Pinia, seletor de paleta, tratamento global
+de erros e fluxo de login protegido. Dependencias como `axios`, `pinia` e
+`vue-router` sao resolvidas automaticamente pelo gerador conforme os recursos
+necessarios.
+
 As versoes das dependencias sao resolvidas no momento da criacao para pegar as
 versoes mais recentes disponiveis. O template `template/package.json` define
 quais pacotes sao instalados.

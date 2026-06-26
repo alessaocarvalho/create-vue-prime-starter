@@ -2,8 +2,8 @@ const PRESET_KEY = 'primevue_preset'
 const DARK_MODE_KEY = 'primevue_dark_mode'
 const FONT_SIZE_KEY = 'primevue_font_size'
 
-const VALID_PRESETS = ['skySlate', 'emeraldSlate', 'roseSlate', 'yellowSlate']
-const DEFAULT_PRESET = 'skySlate'
+const VALID_PRESETS = ['sky', 'emerald', 'rose', 'yellow']
+const DEFAULT_PRESET = 'sky'
 
 export type FontSize = 'small' | 'medium' | 'large'
 

@@ -7,10 +7,10 @@ import type { FontSize } from '@/primevue/utils/themeUtils'
 const { presetKey, setPreset, isDark, toggleDark, fontSize, setFontSize } = useTheme()
 
 const PRESET_MAP: Record<PresetKey, { swatch: string; name: string }> = {
-  skySlate: { swatch: 'bg-sky-500', name: 'Céu' },
-  emeraldSlate: { swatch: 'bg-emerald-500', name: 'Esmeralda' },
-  roseSlate: { swatch: 'bg-rose-500', name: 'Rosa' },
-  yellowSlate: { swatch: 'bg-yellow-500', name: 'Amarelo' },
+  sky: { swatch: 'bg-sky-500', name: 'Céu' },
+  emerald: { swatch: 'bg-emerald-500', name: 'Esmeralda' },
+  rose: { swatch: 'bg-rose-500', name: 'Rosa' },
+  yellow: { swatch: 'bg-yellow-500', name: 'Amarelo' },
 }
 
 const FONT_SIZES: { key: FontSize; label: string; icon: string }[] = [
@@ -48,7 +48,7 @@ const toggle = (event: MouseEvent) => menuRef.value?.toggle(event)
                 v-for="(item, key) in PRESET_MAP"
                 :key="key"
                 type="button"
-                class="flex flex-col items-center gap-1 rounded-lg p-2 transition-colors hover:bg-surface-100 dark:hover:bg-surface-800"
+                class="flex flex-col items-center gap-1 rounded-sm p-2 transition-colors hover:bg-surface-100 dark:hover:bg-surface-800"
                 :class="presetKey === key ? 'ring-2 ring-primary' : ''"
                 :aria-label="`Paleta ${item.name}`"
                 @click="setPreset(key as PresetKey)"

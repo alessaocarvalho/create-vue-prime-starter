@@ -1,13 +1,11 @@
 import { definePreset } from '@primeuix/themes'
 import type { Preset } from '@primeuix/themes/types'
-import Aura from '@primeuix/themes/aura'
+import {{THEME_NAME_CAPITALIZED}} from '@primeuix/themes/{{THEME_NAME}}'
 
 /**
- * Define presets de tema reutilizando o preset Aura do PrimeVue.
+ * Define presets de tema reutilizando o preset {{THEME_NAME_CAPITALIZED}} do PrimeVue.
  * Cada preset altera apenas a cor primaria, mantendo a superficie (surface)
- * compartilhada. Para adicionar uma nova paleta, registre-a em `presets`
- * e adicione a chave correspondente em themeUtils (VALID_PRESETS) e no
- * ThemeSwitcher (PRESET_MAP).
+ * compartilhada.
  */
 const createScale = (color: string) => ({
   50: `{${color}.50}`,
@@ -40,10 +38,10 @@ const createPrimaryPreset = (base: Preset, primaryColor: string): Preset =>
   })
 
 export const presets = {
-  skySlate: createPrimaryPreset(Aura, 'sky'),
-  emeraldSlate: createPrimaryPreset(Aura, 'emerald'),
-  roseSlate: createPrimaryPreset(Aura, 'rose'),
-  yellowSlate: createPrimaryPreset(Aura, 'yellow'),
+  sky: createPrimaryPreset({{THEME_NAME_CAPITALIZED}}, 'sky'),
+  emerald: createPrimaryPreset({{THEME_NAME_CAPITALIZED}}, 'emerald'),
+  rose: createPrimaryPreset({{THEME_NAME_CAPITALIZED}}, 'rose'),
+  yellow: createPrimaryPreset({{THEME_NAME_CAPITALIZED}}, 'yellow'),
 } satisfies Record<string, Preset>
 
 export type PresetKey = keyof typeof presets

@@ -6,6 +6,9 @@
   "bin": {
     "create-vue-prime-starter": "bin/index.mjs"
   },
+  "dependencies": {
+  "@inquirer/prompts": "^7.0.0"
+},
   "files": [
     "bin",
     "template"
