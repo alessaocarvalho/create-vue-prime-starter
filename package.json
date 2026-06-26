@@ -1,14 +1,14 @@
 {
   "name": "create-vue-prime-starter",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Gerador de aplicacoes Vue 3 + PrimeVue com scaffold oficial do Vue e uma base pronta para temas, layouts, HttpClient, stores e tratamento de erros.",
   "type": "module",
   "bin": {
     "create-vue-prime-starter": "bin/index.mjs"
   },
   "dependencies": {
-  "@inquirer/prompts": "^7.0.0"
-},
+    "@inquirer/prompts": "^7.0.0"
+  },
   "files": [
     "bin",
     "template"
